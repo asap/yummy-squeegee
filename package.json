@@ -1,0 +1,38 @@
+{
+  "name": "yummy-squeegee",
+  "version": "0.0.1",
+  "description": "We're on some next shhhh",
+  "engines": {
+    "node": ">=5.0.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.0",
+    "react": "^0.14.1",
+    "react-dom": "^0.14.1",
+    "react-redux": "^4.0.0",
+    "redux": "^3.0.4",
+    "redux-thunk": "~1.0.0",
+    "redux-logger": "~2.0.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.14",
+    "babel-loader": "^6.0.0",
+    "babel-plugin-react-transform": "^1.1.1",
+    "babel-preset-es2015": "^6.0.14",
+    "babel-preset-react": "^6.0.14",
+    "css-loader": "^0.21.0",
+    "eslint": "^1.9.0",
+    "eslint-config-semistandard": "^5.0.0",
+    "eslint-config-standard": "^4.4.0",
+    "eslint-config-standard-react": "^1.1.0",
+    "eslint-plugin-react": "^3.8.0",
+    "eslint-plugin-standard": "^1.3.1",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.2"
+  },
+  "scripts": {
+    "start": "webpack --watch"
+  }
+}
