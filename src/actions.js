@@ -37,7 +37,7 @@ function requestAwwz (awwz) {
 }
 
 function receiveAwwz(awwz, json) {
-  let myAwwz = json.data.children.filter(child => IsValidAww(child.data))
+  let myAwwz = json.data.children.filter(child => isValidAww(child.data))
             .map(child => parseData(child.data))
 
   let currentAww = myAwwz[0].resolutions[myAwwz[0].resolutions.length-1];
@@ -83,14 +83,14 @@ function parseData(item) {
   }
 }
 
-function IsValidAww(aww) {
+function isValidAww(aww) {
   return (!aww.over_18 && aww.thumbnail !== 'self')
 }
 
 function fetchAwwz(awwz) {
   return dispatch => {
     dispatch(requestAwwz(awwz))
-    return fetch('https://www.reddit.com/r/aww.json')
+    return fetch('https://www.reddit.com/r/aww.json?limit=10')
       .then(req => req.json())
       .then(json => dispatch(receiveAwwz(awwz, json)))
   }

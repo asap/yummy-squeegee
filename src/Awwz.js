@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import styles from './Awwz.css'
 
 class Awwz extends Component {
   handleClick(e, aww) {
@@ -10,12 +11,12 @@ class Awwz extends Component {
     let { awwz } = this.props;
 
     return (
-      <ul>
+      <ul className={styles.awwz} >
         {
           awwz.map((aww, index) =>
-          <li key={index}>
+          <li className={styles.aww} key={index}>
             <a href="#" onClick={ e => {this.handleClick(e, aww) }}>
-              <img src={aww.thumb} />
+              <img className={styles.thumb} src={aww.thumb} />
             </a>
           </li>
         )}

@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import styles from './BigAww.css'
 
 class BigAww extends Component {
 
@@ -6,7 +7,7 @@ class BigAww extends Component {
     let { aww } = this.props;
 
     return (
-      <img src={aww.url} height={aww.height} width={aww.width} />
+      <img className={ styles.main} src={aww.url} height={aww.height} width={aww.width} />
     );
   }
 }
